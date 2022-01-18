@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingTop="85dp"
+    android:paddingRight="30dp"
+    tools:context=".SixthActivity">
+
+    <TextView
+        android:id="@+id/lostSthTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="right"
+        android:text="ضاع منك إيه؟"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/lostSthInp"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lostSthTxt"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/cairo_semibold"
+        android:hint="اوصلفنا الحاجة باختصار (مثال : ضاع مني ايفون)"
+        android:inputType="text"
+        android:lines="1"
+        android:scrollHorizontally="false"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:textSize="17sp" />
+
+
+    <TextView
+        android:id="@+id/dscrbTxtLost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lostSthInp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="اوصفلنا الحاجة"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/dscrbInpLost"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dscrbTxtLost"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/cairo_semibold"
+        android:hint="هنا ممكن تضيف أي تفاصيل انت عايزها \n(حد أقصي 150 حرف)"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="2"
+        android:maxLength="150"
+        android:maxLines="3"
+        android:scrollHorizontally="false"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/locationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dscrbInpLost"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:text="ضاعت فين؟"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/locationBtnLost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dscrbInpLost"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="100dp"
+        android:layout_toLeftOf="@id/locationTxt"
+        android:backgroundTint="@color/lightblue"
+        android:fontFamily="@font/cairo_semibold"
+        android:onClick="locationSelectLost"
+        android:text="حدد مكاني"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationTxt"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:text="ضاعت امتى؟"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/dateBtnLost"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationBtnLost"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="85dp"
+        android:layout_toLeftOf="@id/dateTxt"
+        android:backgroundTint="@color/lightblue"
+        android:fontFamily="@font/cairo_semibold"
+        android:onClick="dateSelectLost"
+        android:text="حدد التاريخ"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateBtnLost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="@color/lightblue"
+        android:fontFamily="@font/cairo_semibold"
+        android:onClick="confirmReq"
+        android:text="   تأكيد الطلب   "
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
